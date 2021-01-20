@@ -2,8 +2,8 @@
  * Predefined AutoConnect configuration parameters.
  * @file AutoConnectDefs.h
  * @author hieromon@gmail.com
- * @version  1.2.3
- * @date 2021-01-13
+ * @version  1.3.0
+ * @date 2021-01-21
  * @copyright  MIT license.
  */
 
@@ -222,6 +222,26 @@
 #define AUTOCONNECT_TICKER_PORT       2
 #endif
 #endif
+
+// Storage identifier for AutoConnect credentials. It is global constant
+// and reserved.
+#ifndef AC_IDENTIFIER
+#define AC_IDENTIFIER "AC_CREDT"
+#endif // !AC_IDENTIFIER
+
+// Credential storage area offset specifier in EEPROM.
+// By defining AC_IDENTIFIER_OFFSET macro in the user sketch,
+// the credential storage area can be shifted in EEPROM.
+#ifndef AC_IDENTIFIER_OFFSET
+#define AC_IDENTIFIER_OFFSET  0
+#endif // !AC_IDENTIFIER_OFFSET
+
+// AutoConnectConfig store offset specifier in EEPROM.
+// By defining AC_CONFIGSTORE_OFFSET macro in the user sketch,
+// the store can be shifted in EEPROM.
+#ifndef AC_CONFIGSTORE_OFFSET
+#define AC_CONFIGSTORE_OFFSET  256
+#endif // !AC_CONFIGSTORE_OFFSET
 
 // Lowest WiFi signal strength (RSSI) that can be connected.
 #ifndef AUTOCONNECT_MIN_RSSI

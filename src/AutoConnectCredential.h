@@ -2,8 +2,8 @@
  *  Declaration of AutoConnectCredential class.
  *  @file AutoConnectCredential.h
  *  @author hieromon@gmail.com
- *  @version  1.2.0
- *  @date 2020-04-22
+ *  @version  1.3.0
+ *  @date 2021-01-21
  *  @copyright  MIT license.
  */
 
@@ -34,23 +34,6 @@ extern "C" {
 #include <esp_wifi.h>
 #endif
 #include "AutoConnectDefs.h"
-
-/**
- * Credential storage area offset specifier in EEPROM.
- * By defining AC_IDENTIFIER_OFFSET macro in the user sketch, the credential
- * storage area can be shifted in EEPROM.
- */
-#ifndef AC_IDENTIFIER_OFFSET
-#define AC_IDENTIFIER_OFFSET  0
-#endif
-
-/**
- * Storage identifier for AutoConnect credentials. It is global constant
- * and reserved.
- */
-#ifndef AC_IDENTIFIER
-#define AC_IDENTIFIER "AC_CREDT"
-#endif
 
 typedef enum {
   STA_DHCP = 0,
